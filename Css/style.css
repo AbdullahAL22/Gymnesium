@@ -76,7 +76,7 @@ img {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: var(--ovr);
+    background-color: var(--cl1);
     border: 5px solid rgba(255, 255, 255, 0.479);
     transform: scale(0.1);
     opacity: 0;
@@ -85,7 +85,7 @@ img {
 
 .item:hover .item-over {
     transform: scale(0.9);
-    opacity: 0.7;
+    opacity: 0.8;
 }
 
 
