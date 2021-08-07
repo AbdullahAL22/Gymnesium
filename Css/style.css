@@ -76,7 +76,7 @@ img {
     left: 0;
     width: 100%;
     height: 100%;
-    background: var(--ovr);
+    background-color: var(--ovr);
     border: 5px solid rgba(255, 255, 255, 0.479);
     transform: scale(0.1);
     opacity: 0;
@@ -85,7 +85,7 @@ img {
 
 .item:hover .item-over {
     transform: scale(0.9);
-    opacity: 1;
+    opacity: 0.7;
 }
 
 
@@ -105,9 +105,10 @@ img {
 #top .top i{
     padding: 10px 12px 0px 12px;
     border-radius: 15%;
-    background-color: rgba(243, 115, 115, 0.856);
+    background-color: rgb(243, 115, 115);
     text-align: center;
     color: #f1f1f1;
+    opacity: 0.8;
     font-size: 30px;
     transition: all ease 0.1s;
 }
@@ -115,7 +116,7 @@ img {
 #top .top i:hover{
     border-radius: 30%;
     transform: scale(1.2);
-    background-color: rgb(245, 136, 136);
+    opacity: 1;
     color: #ffffff;
 
 }
@@ -131,7 +132,7 @@ img {
     top: 0px !important;
 }
 
-.over {
+.over-flow {
     line-height: 72px !important;
 }
 
@@ -190,7 +191,7 @@ img {
     content: '';
     width: 0%;
     height: 3px;
-    background: var(--cl1);
+    background-color: var(--cl1);
     position: absolute;
     bottom: 0;
     left: 0;
@@ -300,7 +301,7 @@ img {
 
 #banner .slider-item .banner-text a:hover {
     border-color: var(--cl1);
-    background: var(--cl1);
+    background-color: var(--cl1);
     color: #fff;
 }
 
@@ -395,16 +396,19 @@ img {
     border: none;
     outline: none;
     background: none;
+    color: transparent !important;
 }
 
 #banner .slick-dots li:hover {
-    background: #e23e3857;
+    background: rgb(226, 60, 54);
+    opacity: 0.5;
     border-color: #e23e389c;
 }
 
 #banner .slick-dots .slick-active {
     transform: scale(1.3);
     background: var(--cl1);
+    opacity: 1;
     border-color: transparent;
 }
 
@@ -445,7 +449,8 @@ img {
     line-height: 578px;
     height: 578px;
     font-size: 174px;
-    background: #e23e38a2;
+    background: #e23e38;
+    opacity: 0.65;
     color: #353535e7;
     /* transform: translate(50%, 50%); */
 }
@@ -461,6 +466,7 @@ img {
     height: 48px;
     border-radius: 50%;
     background: var(--cl1);
+    opacity: 1;
     text-align: center;
     line-height: 48px;
     display: inline-block;
@@ -738,16 +744,19 @@ img {
     border: none;
     outline: none;
     background: none;
+    color: transparent !important;
 }
 
 #testimonial .slick-dots li:hover {
-    background: #e23e3857;
+    background: #e23e38;
+    opacity: 0.3;
     border-color: #e23e389c;
 }
 
 #testimonial .slick-dots .slick-active {
     transform: scale(1.3);
     background: var(--cl1);
+    opacity: 1;
     border-color: transparent;
 }
 
@@ -958,12 +967,14 @@ img {
 }
 
 #routine .routine-head .nav-tabs .nav-item .nav-link:hover{
-    background-color: #e23e386e;
+    background-color: rgb(226, 62, 56);
+    opacity: 0.45;
     color: #f3f3f36e;
 }
 
 #routine .routine-head .nav-tabs .nav-item .nav-link.active{
     border: none !important;
+    opacity: 1;
     background-color: var(--cl1);
     color: #fff;
 }
@@ -1023,11 +1034,13 @@ img {
 
 #routine .tab-content .tab-pane ul li.active{
     background-color: var(--cl1);
+    opacity: 1;
     color: #ffffff;
 }
 
 #routine .tab-content .tab-pane ul li.active:hover{
-    background-color: #e23e388c;
+    background-color: #e23e38;
+    opacity: 0.5;
 }
 
 #routine .tab-content .tab-pane ul li.active p{
@@ -1298,12 +1311,17 @@ img {
     right: -240px;
     width: 300px;
     height: 50px;
-    background: rgba(170, 169, 169, 0.877);
+    background: rgba(212, 212, 212, 0.712);
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
     z-index: 100;
     cursor: pointer;
+    box-shadow: -5px 6px 9px -2px rgba(37, 37, 37, 0.5);
     transition: all ease-in-out 0.2s;
+    -o-transition: all ease-in-out 0.2s;
+    -ms-transition: all ease-in-out 0.2s;
+    -moz-transition: all ease-in-out 0.2s;
+    -webkit-transition: all ease-in-out 0.2s;
 }
 
 .color-click{
@@ -1313,12 +1331,19 @@ img {
 #color-choice .color-icon{
     width: 60px;
     background: rgb(230, 68, 68);
+    opacity: 0.7;
     text-align: center;
     padding-right: 5px;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
     display: block;
+    transition: all ease 0.4s;
 }
+
+#color-choice .color-icon:hover{
+    opacity: 0.95;
+}
+
 
 #color-choice .color-icon i{
     line-height: 50px;
@@ -1353,21 +1378,199 @@ img {
 }
 
 #color-choice ul .default{
-    background: var(--cl1);
+    background-color: var(--cl1);
 }
 
 #color-choice ul .green{
-    background: rgb(116, 114, 54);
+    background-color: #17a267;
 }
 
 #color-choice ul .blue{
-    background: rgb(29, 137, 151);
+    background-color: #1d8997;
 }
 
 #color-choice ul .orange{
-    background: rgb(209, 101, 29);
+    background-color: #d1651d;
 }
 
 #color-choice ul .purple{
-    background: rgb(62, 78, 145);
+    background-color: #3e4e91;
 }
+
+/* ------------- green-color-correction ------------- */
+
+
+
+.green #banner .slider-item .banner-text a:hover,
+.green #footer .footer-item .link i:hover
+{
+    border-color: #17a267;
+}
+
+.green .item-over,
+.green #top .top i,
+.green .navbar-light .navbar-nav .nav-item .nav-link::after,
+.green #banner .slider-item .banner-text a:hover,
+.green #banner .bgi .banner-text::before,
+.green #banner .bgi .banner-text::after,
+.green #banner .bgi .banner-text h2::before,
+.green #banner .bgi .banner-text h2::after,
+.green #banner .bgi .banner-text p::before,
+.green #banner .bgi .banner-text p::after,
+.green .slick-dots li:hover,
+.green .slick-dots .slick-active,
+.green #about .about-video .about-over .about-icon:hover i,
+.green #about .about-video .about-over .about-icon i,
+.green #membership .pricing:hover .member-head h3,
+.green #membership .pricing .member-button a:hover,
+.green #routine .routine-head .nav-tabs .nav-item .nav-link.active,
+.green #routine .routine-head .nav-tabs .nav-item .nav-link:hover,
+.green #routine .tab-content .tab-pane ul li.active,
+.green #routine .tab-content .tab-pane ul li.active:hover,
+.green #footer .footer-item .link i:hover,
+.green #color-choice .color-icon
+{
+    background-color: #17a267 !important;
+}
+
+.green #banner .slider-item .banner-text h1,
+.green #testimonial .test-item .test-title ul li,
+.green #footer .footer-item li .cnt-icon i,
+.green #footer .footer-copy p a:hover
+{
+    color: #17a267 !important;
+}
+ 
+
+/* ------------- blue-color-correction ------------- */
+
+
+
+.blue #banner .slider-item .banner-text a:hover,
+.blue #footer .footer-item .link i:hover
+{
+    border-color: #1d8997;
+}
+
+.blue .item-over,
+.blue #top .top i,
+.blue .navbar-light .navbar-nav .nav-item .nav-link::after,
+.blue #banner .slider-item .banner-text a:hover,
+.blue #banner .bgi .banner-text::before,
+.blue #banner .bgi .banner-text::after,
+.blue #banner .bgi .banner-text h2::before,
+.blue #banner .bgi .banner-text h2::after,
+.blue #banner .bgi .banner-text p::before,
+.blue #banner .bgi .banner-text p::after,
+.blue .slick-dots li:hover,
+.blue .slick-dots .slick-active,
+.blue #about .about-video .about-over .about-icon:hover i,
+.blue #about .about-video .about-over .about-icon i,
+.blue #membership .pricing:hover .member-head h3,
+.blue #membership .pricing .member-button a:hover,
+.blue #routine .routine-head .nav-tabs .nav-item .nav-link.active,
+.blue #routine .routine-head .nav-tabs .nav-item .nav-link:hover,
+.blue #routine .tab-content .tab-pane ul li.active,
+.blue #routine .tab-content .tab-pane ul li.active:hover,
+.blue #footer .footer-item .link i:hover,
+.blue #color-choice .color-icon
+{
+    background-color: #1d8997 !important;
+}
+
+.blue #banner .slider-item .banner-text h1,
+.blue #testimonial .test-item .test-title ul li,
+.blue #footer .footer-item li .cnt-icon i,
+.blue #footer .footer-copy p a:hover
+{
+    color: #1d8997 !important;
+}
+ 
+
+/* ------------- prange-color-correction ------------- */
+
+
+.orange #banner .slider-item .banner-text a:hover,
+.orange #footer .footer-item .link i:hover
+{
+    border-color: #d1651d;
+}
+
+.orange .item-over,
+.orange #top .top i,
+.orange .navbar-light .navbar-nav .nav-item .nav-link::after,
+.orange #banner .slider-item .banner-text a:hover,
+.orange #banner .bgi .banner-text::before,
+.orange #banner .bgi .banner-text::after,
+.orange #banner .bgi .banner-text h2::before,
+.orange #banner .bgi .banner-text h2::after,
+.orange #banner .bgi .banner-text p::before,
+.orange #banner .bgi .banner-text p::after,
+.orange .slick-dots li:hover,
+.orange .slick-dots .slick-active,
+.orange #about .about-video .about-over .about-icon:hover i,
+.orange #about .about-video .about-over .about-icon i,
+.orange #membership .pricing:hover .member-head h3,
+.orange #membership .pricing .member-button a:hover,
+.orange #routine .routine-head .nav-tabs .nav-item .nav-link.active,
+.orange #routine .routine-head .nav-tabs .nav-item .nav-link:hover,
+.orange #routine .tab-content .tab-pane ul li.active,
+.orange #routine .tab-content .tab-pane ul li.active:hover,
+.orange #footer .footer-item .link i:hover,
+.orange #color-choice .color-icon
+{
+    background-color: #d1651d !important;
+}
+
+.orange #banner .slider-item .banner-text h1,
+.orange #testimonial .test-item .test-title ul li,
+.orange #footer .footer-item li .cnt-icon i,
+.orange #footer .footer-copy p a:hover
+{
+    color: #d1651d !important;
+}
+ 
+
+/* ------------- purple-color-correction ------------- */
+
+
+.purple #banner .slider-item .banner-text a:hover,
+.purple #footer .footer-item .link i:hover
+{
+    border-color: #3e4e91;
+}
+
+.purple .item-over,
+.purple #top .top i,
+.purple .navbar-light .navbar-nav .nav-item .nav-link::after,
+.purple #banner .slider-item .banner-text a:hover,
+.purple #banner .bgi .banner-text::before,
+.purple #banner .bgi .banner-text::after,
+.purple #banner .bgi .banner-text h2::before,
+.purple #banner .bgi .banner-text h2::after,
+.purple #banner .bgi .banner-text p::before,
+.purple #banner .bgi .banner-text p::after,
+.purple .slick-dots li:hover,
+.purple .slick-dots .slick-active,
+.purple #about .about-video .about-over .about-icon:hover i,
+.purple #about .about-video .about-over .about-icon i,
+.purple #membership .pricing:hover .member-head h3,
+.purple #membership .pricing .member-button a:hover,
+.purple #routine .routine-head .nav-tabs .nav-item .nav-link.active,
+.purple #routine .routine-head .nav-tabs .nav-item .nav-link:hover,
+.purple #routine .tab-content .tab-pane ul li.active,
+.purple #routine .tab-content .tab-pane ul li.active:hover,
+.purple #footer .footer-item .link i:hover,
+.purple #color-choice .color-icon
+{
+    background-color: #3e4e91 !important;
+}
+
+.purple #banner .slider-item .banner-text h1,
+.purple #testimonial .test-item .test-title ul li,
+.purple #footer .footer-item li .cnt-icon i,
+.purple #footer .footer-copy p a:hover
+{
+    color: #3e4e91 !important;
+}
+ 
